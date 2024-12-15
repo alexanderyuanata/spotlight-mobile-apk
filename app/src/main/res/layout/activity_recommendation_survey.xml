@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.recommendsurvey.RecommendationSurveyActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/survey_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/survey_recommendation_title"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="48sp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/survey_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/survey_recommendation_description"
+                android:textColor="@color/text_color_primary"
+                android:textAlignment="center"
+                android:paddingHorizontal="14dp"
+                android:textSize="19sp"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/survey_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/book_first_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_first_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/survey_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/book_first_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/book_first_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/book_first_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_first_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_book_title"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/book_first_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/book_first_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_book_first_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/book_second_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_second_question"
+                android:textColor="@color/text_color_primary"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/book_first_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/book_second_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/book_second_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/book_second_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_second_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_book_author"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/book_second_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/book_second_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_book_second_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/book_third_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_third_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/book_second_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/book_third_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/book_third_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/book_third_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_third_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_overview"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/book_third_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/book_third_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_book_third_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/book_fourth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_fourth_question"
+                android:textColor="@color/text_color_primary"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/book_third_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/book_fourth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/book_fourth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/book_fourth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_preference"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_fourth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/star_3"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_fourth_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/star_4"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_fourth_question_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/star_5"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/book_fifth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_fifth_question"
+                android:textColor="@color/text_color_primary"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/book_fourth_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/book_fifth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/book_fifth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/book_fifth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fantasy"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_fifth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/romance"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_fifth_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/horror"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/book_fifth_question_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comedy"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/movie_first_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_first_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/book_fifth_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/movie_first_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_first_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/movie_first_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_5_years"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_first_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_10_years"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_first_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_20_years"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_first_question_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/any_year"
+                    android:textColor="@color/text_color_primary"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/movie_second_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_second_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_first_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/movie_second_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_second_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/movie_second_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/short_less_than_90_minutes"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_second_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regular_less_than_150_minutes"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_second_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/long_more_than_150_minutes"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/movie_third_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_third_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_second_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/movie_third_question_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_third_question_hint"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_third_question"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/movie_third_question_input_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/movie_third_question_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_movie_third_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="text"
+                    android:textColor="@color/text_color_primary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/movie_fourth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_fourth_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_third_question_input_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/movie_fourth_question_input_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/movie_fourth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_movie_fourth_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="number"
+                    android:textColor="@color/text_color_primary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/movie_fifth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_fifth_question"
+                android:textColor="@color/text_color_primary"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_fourth_question_input_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/movie_fifth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_fifth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/movie_fifth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_fifth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_director"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/movie_fifth_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/book_first_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_movie_fifth_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/movie_sixth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_sixth_question"
+                android:textColor="@color/text_color_primary"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_fifth_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/movie_sixth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_sixth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/movie_sixth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_sixth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_actor"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/movie_sixth_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/book_first_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_movie_sixth_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/movie_seventh_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_seventh_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_sixth_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/movie_seventh_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_seventh_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/movie_seventh_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/movies_that_are_lesser_known"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_seventh_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/movies_that_are_talked_about_quite_often"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/movie_seventh_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular_movies_that_many_people_know_about"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tour_first_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tour_first_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_seventh_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/tour_first_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tour_first_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/tour_first_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_first_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_tour_name"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tour_first_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tour_first_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_tour_first_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tour_second_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tour_second_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/tour_first_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/tour_second_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tour_second_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/tour_second_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_need_recommendation"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_second_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_give_the_tour_type"
+                    android:textColor="@color/text_color_primary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tour_second_question_input_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tour_second_question_option2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_tour_second_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="text"
+                        android:textColor="@color/text_color_primary"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tour_third_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tour_third_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/tour_second_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/tour_third_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tour_third_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/tour_third_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/culture"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_third_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amusement_parks"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_third_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nature_preserve"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_third_question_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nautical"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_third_question_option5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shopping_center"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_third_question_option6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/worship_place"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tour_fourth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tour_fourth_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/tour_third_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/tour_fourth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tour_fourth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/tour_fourth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jakarta"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fourth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yogyakarta"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fourth_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bandung"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fourth_question_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/semarang"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fourth_question_option5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/surabaya"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tour_fifth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tour_fifth_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/tour_fourth_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/tour_fifth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tour_fifth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/tour_fifth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_preference"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fifth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/star_3"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fifth_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/star_4"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_fifth_question_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/star_5"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tour_sixth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tour_sixth_question"
+                android:textColor="@color/text_color_primary"
+                android:paddingHorizontal="24dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="42dp"
+                app:layout_constraintTop_toBottomOf="@+id/tour_fifth_question_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/tour_sixth_question_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tour_sixth_question"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/tour_sixth_question_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_problem"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_sixth_question_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more_than_10_reviews"
+                    android:textColor="@color/text_color_primary"/>
+
+                <RadioButton
+                    android:id="@+id/tour_sixth_question_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more_than_20_reviews"
+                    android:textColor="@color/text_color_primary"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/recommendation_survey_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lets_go"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/purple"
+                app:layout_constraintTop_toBottomOf="@id/tour_sixth_question_radio_group"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/purple"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/light_purple"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="16dp"
+    card_view:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_item_movie_cover"
+            tools:src="@tools:sample/avatars"
+            android:scaleType="centerCrop"
+            android:layout_width="114dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerLarge"/>
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_title"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/year"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/movie_title" />
+
+        <TextView
+            android:id="@+id/year_text"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/year"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/year"/>
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/genre"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/year_text" />
+
+        <TextView
+            android:id="@+id/genre_text"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/genre"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/genre"/>
+
+        <TextView
+            android:id="@+id/vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/vote"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/genre_text" />
+
+        <TextView
+            android:id="@+id/vote_text"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vote"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/vote"/>
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/vote_text"/>
+
+        <TextView
+            android:id="@+id/duration_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/duration"/>
+
+        <TextView
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="3dp"
+            card_view:layout_constraintStart_toEndOf="@id/duration_text"
+            card_view:layout_constraintTop_toBottomOf="@id/duration"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/duration_text"/>
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/star"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_movie_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/rating"/>
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="10dp"
+            card_view:layout_constraintStart_toEndOf="@id/star"
+            card_view:layout_constraintTop_toBottomOf="@id/rating"/>
+
+        <TextView
+            android:id="@+id/ten_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_10"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"
+            card_view:layout_constraintStart_toEndOf="@id/rating_text"
+            card_view:layout_constraintTop_toBottomOf="@id/rating"/>
+
+        <TextView
+            android:id="@+id/cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/cast"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/iv_item_movie_cover"/>
+
+        <TextView
+            android:id="@+id/cast_text"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/cast"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:justificationMode="inter_word"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/cast" />
+
+        <TextView
+            android:id="@+id/director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/director"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/cast_text"/>
+
+        <TextView
+            android:id="@+id/director_text"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/director"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:justificationMode="inter_word"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/director"
+            card_view:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

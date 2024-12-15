@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/light_purple"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="16dp"
+    card_view:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_item_travel_cover"
+            tools:src="@tools:sample/avatars"
+            android:scaleType="centerCrop"
+            android:layout_width="114dp"
+            android:layout_height="230dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerLarge"/>
+
+        <TextView
+            android:id="@+id/travel_title"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/travel_title"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/category"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/travel_title" />
+
+        <TextView
+            android:id="@+id/category_text"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/category"/>
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/city"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/category_text" />
+
+        <TextView
+            android:id="@+id/city_text"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/city"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/city_text"/>
+
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/price"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/price_text"/>
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/star"
+            android:layout_marginStart="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/iv_item_travel_cover"
+            card_view:layout_constraintTop_toBottomOf="@id/rating"/>
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="10dp"
+            card_view:layout_constraintStart_toEndOf="@id/star"
+            card_view:layout_constraintTop_toBottomOf="@id/rating"/>
+
+        <ImageView
+            android:id="@+id/maps_btn"
+            android:layout_width="32dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="224dp"
+            android:src="@drawable/ic_maps"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/description"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/iv_item_travel_cover"/>
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/description"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:justificationMode="inter_word"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/description"
+            card_view:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
